@@ -1,4 +1,4 @@
-package br.com.academyapi.academy.modelo;
+package br.com.academyapi.academy.api.modelo;
 
 import java.time.LocalDate;
 
@@ -13,14 +13,13 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "Alunos")
 @Getter
 @Setter
-public class Aluno{
-
+@Table(name = "Funcionarios")
+public class Funcionario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-   
+
     private long Id;
 
     @Column
@@ -39,16 +38,20 @@ public class Aluno{
     private int telefone;
 
     @Column
-    private double altura;
+    private double salario;
 
     @Column
-    private double peso;
+    private String cargo;
 
     @Column
-    private String planoTreino;
-    
-    @Column
-    private String tipoPagamento;
-    
+    private LocalDate dataAdmissao;
 
+    @Column
+    private String funcao;
+
+    @Column
+    private String formacao;
+
+    @Column
+    private String certificacao;
 }
