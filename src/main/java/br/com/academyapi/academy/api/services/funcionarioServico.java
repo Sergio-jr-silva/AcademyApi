@@ -16,4 +16,11 @@ public class funcionarioServico {
     public Iterable<Funcionario> listar(){
         return pr.findAll();
     }
+
+    public Funcionario save(Funcionario funcionario) {
+        return funcionario;
+    }
+
+  
+
 }
