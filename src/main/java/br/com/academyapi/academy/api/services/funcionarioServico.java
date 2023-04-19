@@ -18,7 +18,7 @@ public class funcionarioServico {
     }
 
     public Funcionario save(Funcionario funcionario) {
-        return funcionario;
+        return pr.save(funcionario);
     }
 
   

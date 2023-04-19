@@ -9,17 +9,19 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
+
 
 import lombok.Getter;
 import lombok.Setter;
+
 
 @Entity
 @Component
 @Table(name = "Alunos")
 @Getter
 @Setter
+
 public class Aluno{
 
     @Id
@@ -54,16 +56,7 @@ public class Aluno{
     @Column
     private String tipoPagamento;
 
-    public ResponseEntity<?> cadastrar(Aluno al) {
-        return null;
-    }
-
-    public Iterable<Aluno> findAll() {
-        return null;
-    }
-
-   
-
-    
+    @Column
+    private int Idade;
 
 }

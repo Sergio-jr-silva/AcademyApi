@@ -57,9 +57,4 @@ public class Funcionario {
 
     @Column
     private String certificacao;
-
-   
-
-
- 
 }
