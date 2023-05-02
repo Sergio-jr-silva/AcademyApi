@@ -1,5 +1,6 @@
 package br.com.academyapi.academy.api.services;
 
+import org.hibernate.mapping.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +20,10 @@ public class funcionarioServico {
 
     public Funcionario save(Funcionario funcionario) {
         return pr.save(funcionario);
+    }
+
+    public java.util.List<Funcionario> findall() {
+        return null;
     }
 
   

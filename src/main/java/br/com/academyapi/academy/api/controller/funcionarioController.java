@@ -1,7 +1,6 @@
 package br.com.academyapi.academy.api.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,7 +20,7 @@ public String rota(){
   return "Olá";
 }
 
-    @GetMapping("/listar")
+    @GetMapping("/funcionario/lista")
     public Iterable<Funcionario> listar(){
       return fs.listar();
     }
