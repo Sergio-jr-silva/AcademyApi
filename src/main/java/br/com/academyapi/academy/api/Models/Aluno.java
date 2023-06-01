@@ -1,4 +1,4 @@
-package br.com.academyapi.academy.api.modelo;
+package br.com.academyapi.academy.api.Models;
 
 import java.time.LocalDate;
 
@@ -11,18 +11,22 @@ import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
 
+
 import lombok.Getter;
 import lombok.Setter;
 
+
 @Entity
 @Component
+@Table(name = "Alunos")
 @Getter
 @Setter
-@Table(name = "Funcionarios")
-public class Funcionario {
+
+public class Aluno{
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
+   
     private long Id;
 
     @Column
@@ -41,20 +45,18 @@ public class Funcionario {
     private int telefone;
 
     @Column
-    private double salario;
+    private double altura;
 
     @Column
-    private String cargo;
+    private double peso;
 
     @Column
-    private LocalDate dataAdmissao;
+    private String planoTreino;
 
     @Column
-    private String funcao;
+    private String tipoPagamento;
 
     @Column
-    private String formacao;
+    private int Idade;
 
-    @Column
-    private String certificacao;
 }

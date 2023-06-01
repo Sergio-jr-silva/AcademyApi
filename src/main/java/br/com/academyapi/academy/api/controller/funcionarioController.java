@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.academyapi.academy.api.modelo.Funcionario;
+import br.com.academyapi.academy.api.Models.Funcionario;
 import br.com.academyapi.academy.api.services.funcionarioServico;
 
 @RestController

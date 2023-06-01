@@ -1,5 +1,6 @@
-package br.com.academyapi.academy.api.modelo;
+package br.com.academyapi.academy.api.Models;
 
+import java.sql.Date;
 import java.time.LocalDate;
 
 import javax.persistence.Column;
@@ -9,24 +10,23 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.apache.tomcat.jni.Local;
 import org.springframework.stereotype.Component;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import lombok.Getter;
 import lombok.Setter;
 
-
 @Entity
 @Component
-@Table(name = "Alunos")
 @Getter
 @Setter
-
-public class Aluno{
-
+@Table(name = "Funcionarios")
+public class Funcionario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-   
+
     private long Id;
 
     @Column
@@ -36,6 +36,7 @@ public class Aluno{
     private String genero;
 
     @Column
+    @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate dataNascimento;
 
     @Column
@@ -45,18 +46,20 @@ public class Aluno{
     private int telefone;
 
     @Column
-    private double altura;
+    private double salario;
 
     @Column
-    private double peso;
+    private String cargo;
 
     @Column
-    private String planoTreino;
+    private LocalDate dataAdmissao;
 
     @Column
-    private String tipoPagamento;
+    private String funcao;
 
     @Column
-    private int Idade;
+    private String formacao;
 
+    @Column
+    private String certificacao;
 }

@@ -5,7 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import br.com.academyapi.academy.api.modelo.Funcionario;
+import br.com.academyapi.academy.api.Models.Funcionario;
 import br.com.academyapi.academy.api.repository.funcionarioRepositorio;
 
 @Service
