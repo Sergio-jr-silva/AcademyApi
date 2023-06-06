@@ -9,12 +9,14 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.academyapi.academy.api.Models.Aluno;
 import br.com.academyapi.academy.api.services.AlunoServico;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 
 @RestController
+@CrossOrigin
 public class alunoController {
    
   @Autowired

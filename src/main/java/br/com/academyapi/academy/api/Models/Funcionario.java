@@ -22,7 +22,7 @@ import lombok.Setter;
 @Component
 @Getter
 @Setter
-@Table(name = "Funcionarios")
+@Table(name = "Instrutores")
 public class Funcionario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -49,17 +49,13 @@ public class Funcionario {
     private double salario;
 
     @Column
-    private String cargo;
+    private String senha;
 
     @Column
+    @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate dataAdmissao;
-
-    @Column
-    private String funcao;
 
     @Column
     private String formacao;
 
-    @Column
-    private String certificacao;
 }

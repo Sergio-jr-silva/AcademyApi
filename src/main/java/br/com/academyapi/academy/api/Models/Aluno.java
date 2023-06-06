@@ -11,7 +11,6 @@ import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
 
-
 import lombok.Getter;
 import lombok.Setter;
 
@@ -21,7 +20,6 @@ import lombok.Setter;
 @Table(name = "Alunos")
 @Getter
 @Setter
-
 public class Aluno{
 
     @Id
@@ -51,12 +49,8 @@ public class Aluno{
     private double peso;
 
     @Column
-    private String planoTreino;
-
-    @Column
-    private String tipoPagamento;
-
-    @Column
     private int Idade;
 
+
 }
+
