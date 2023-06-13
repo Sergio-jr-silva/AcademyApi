@@ -31,6 +31,9 @@ public class Aluno{
     private String nome;
 
     @Column
+    private String sobrenome;
+
+    @Column
     private String genero;
 
     @Column
@@ -40,7 +43,7 @@ public class Aluno{
     private String email;
 
     @Column
-    private int telefone;
+    private String telefone;
 
     @Column
     private double altura;
@@ -50,6 +53,9 @@ public class Aluno{
 
     @Column
     private int Idade;
+
+    @Column
+    private int senha;
 
 
 }

@@ -33,6 +33,9 @@ public class Funcionario {
     private String nome;
 
     @Column
+    private String sobrenome;
+
+    @Column
     private String genero;
 
     @Column
@@ -43,7 +46,7 @@ public class Funcionario {
     private String email;
 
     @Column
-    private int telefone;
+    private String telefone;
 
     @Column
     private double salario;
@@ -57,5 +60,8 @@ public class Funcionario {
 
     @Column
     private String formacao;
+
+    @Column
+    private boolean certificado;
 
 }

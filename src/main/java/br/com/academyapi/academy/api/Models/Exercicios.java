@@ -1,5 +1,6 @@
 package br.com.academyapi.academy.api.Models;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -21,5 +22,12 @@ public class Exercicios {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
+    @Column
     private String Nome;
+
+      @Column
+    private String repeticoes;
+
+     @Column
+    private String numeroSerie;
 }
