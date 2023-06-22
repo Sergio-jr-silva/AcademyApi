@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.academyapi.academy.api.Models.Aluno;
@@ -17,28 +18,24 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 @RestController
 @CrossOrigin
+@RequestMapping("/aluno")
 public class alunoController {
    
   @Autowired
   private AlunoServico al;
 
-  @GetMapping("/aluno")
-  public String Home(){
-      return("aqui vai ser o home do aluno!");
-  } 
-
-  @GetMapping("/aluno/dados")
+  @GetMapping
   public Iterable<Aluno> listar(){
     return al.listar();
   }
   
 
-  @PostMapping("/aluno/cadastrar")
+  @PostMapping
   public Aluno cadastrar(@RequestBody Aluno aluno){
     return al.save(aluno);
   }
 
-  @DeleteMapping("/aluno/deletar/{id}")
+  @DeleteMapping("/{id}")
   public ResponseEntity<Aluno> remover(@PathVariable long id){
     return al.remover(id);
   } 

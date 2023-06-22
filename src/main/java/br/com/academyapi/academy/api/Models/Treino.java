@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import org.springframework.stereotype.Component;
 
@@ -19,6 +21,11 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Treino {
+
+     @ManyToOne
+     @JoinColumn(name = "exercicios_id")
+     private Exercicios exercicios;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
    
@@ -33,11 +40,6 @@ public class Treino {
     @Column
     private LocalDate dataInicio;
 
-    @Column 
-    private int Repeticoes;
-
-    @Column
-    private double Carga;
-
+    
  
 }

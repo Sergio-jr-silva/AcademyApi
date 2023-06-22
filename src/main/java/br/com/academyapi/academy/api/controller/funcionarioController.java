@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.academyapi.academy.api.Models.Funcionario;
@@ -15,27 +16,22 @@ import br.com.academyapi.academy.api.services.funcionarioServico;
 
 @RestController
 @CrossOrigin
+@RequestMapping("/funcionario")
 public class funcionarioController {
     @Autowired
     private funcionarioServico fs;
 
-
-@GetMapping("/funcionario")
-public String Home(){
-  return "Olá";
-}
-
-    @GetMapping("/funcionario/lista")
+    @GetMapping
     public Iterable<Funcionario> listar(){
       return fs.listar();
     }
    
-    @PostMapping("/funcionario/cadastrar")
+    @PostMapping
     public Funcionario cadastrar( @RequestBody Funcionario funcionario){
       return fs.save(funcionario);
     }
 
-    @DeleteMapping("/funcionario/deletar/{id}")
+    @DeleteMapping("/{id}")
   public ResponseEntity<Funcionario> remover(@PathVariable long id){
     return fs.remover(id);
   } 

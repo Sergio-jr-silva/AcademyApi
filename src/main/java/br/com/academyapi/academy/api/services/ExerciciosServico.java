@@ -16,4 +16,6 @@ public class ExerciciosServico {
     public Exercicios save(Exercicios exercicio) {
         return ex.save(exercicio);
     }
+
+
 }
