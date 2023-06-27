@@ -40,6 +40,10 @@ public class Treino {
     @Column
     private LocalDate dataInicio;
 
-    
+    @Column
+    private String repeticoes;
+
+    @Column
+    private String numeroSerie;
  
 }

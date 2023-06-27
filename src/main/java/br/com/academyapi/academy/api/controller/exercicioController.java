@@ -19,7 +19,7 @@ public class exercicioController {
     private ExerciciosServico ex;
 
 
-    @PostMapping("/exercicios/cadastrar")
+    @PostMapping
     public Exercicios cadastrar(@RequestBody Exercicios exercicios){
       return ex.save(exercicios);
     }

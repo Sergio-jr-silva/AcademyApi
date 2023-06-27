@@ -31,19 +31,13 @@ public class Aluno{
     private String nome;
 
     @Column
-    private String sobrenome;
-
-    @Column
-    private String genero;
-
-    @Column
     private LocalDate dataNascimento;
 
     @Column
     private String email;
 
     @Column
-    private String telefone;
+    private String celular;
 
     @Column
     private double altura;
@@ -52,7 +46,10 @@ public class Aluno{
     private double peso;
 
     @Column
-    private int Idade;
+    private String pagamento;
+
+    @Column
+    private String plano;
 
     @Column
     private int senha;

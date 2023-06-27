@@ -25,9 +25,5 @@ public class Exercicios {
     @Column
     private String Nome;
 
-      @Column
-    private String repeticoes;
-
-     @Column
-    private String numeroSerie;
+  
 }
