@@ -39,7 +39,7 @@ public class Treino {
 
      @ManyToOne
      @JoinColumn(name = "itemTreino")
-     private itemTreino itemTreino;
+     private List<itemTreino> itemTreino;
      
      private Long idItemTreino;
  

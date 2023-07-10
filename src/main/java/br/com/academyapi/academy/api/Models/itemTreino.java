@@ -29,6 +29,10 @@ public class itemTreino {
      @JoinColumn(name = "exercicios_id")
      private Exercicios exercicios;
 
+       @ManyToOne
+     @JoinColumn(name = "treino")
+     private treino treino;
+
     @Column
     private String repeticoes;
 
