@@ -4,20 +4,24 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import org.springframework.stereotype.Component;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
+@Builder
 @Entity
 @Component
 @Table(name = "ItemTreino")
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class itemTreino {
 
     @Id
@@ -25,14 +29,9 @@ public class itemTreino {
     private long Id;
 
        
-     @ManyToOne
-     @JoinColumn(name = "exercicios_id")
-     private Exercicios exercicios;
-
-       @ManyToOne
-     @JoinColumn(name = "treino")
-     private treino treino;
-
+    @ManyToOne
+    private Exercicios Exercicios;
+ 
     @Column
     private String repeticoes;
 

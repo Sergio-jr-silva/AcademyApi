@@ -37,9 +37,7 @@ public class Treino {
     @Column
     private LocalDate dataInicio;
 
-     @ManyToOne
-     @JoinColumn(name = "itemTreino")
-     private List<itemTreino> itemTreino;
+    
      
      private Long idItemTreino;
  
